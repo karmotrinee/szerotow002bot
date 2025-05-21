@@ -6,6 +6,6 @@ services:
     startCommand: "python main.py"
     envVars:
       - key: TELEGRAM_BOT_TOKEN
-        value: 7175283426:AAFLsjVA3lP8QhVx5r4uHDKA94UuTK0THaI
+        sync: 7175283426:AAFLsjVA3lP8QhVx5r4uHDKA94UuTK0THaI
       - key: TELEGRAM_CHAT_ID
-        value: -1002652115660
+        sync: -1002652115660
