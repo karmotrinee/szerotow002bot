@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: szerotwo002bot
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: 7175283426:AAFLsjVA3lP8QhVx5r4uHDKA94UuTK0THaI
+      - key: TELEGRAM_CHAT_ID
+        sync: -1002652115660
