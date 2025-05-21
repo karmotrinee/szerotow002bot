@@ -10,7 +10,9 @@ TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
 
 @app.route('/tradingview', methods=['POST'])
 def tradingview_webhook():
+    # 📌 진단용 로그: 트레이딩뷰에서 전송된 데이터 확인
     data = request.get_json()
+    print("✅ 수신된 데이터:", data)
 
     symbol = data.get('symbol', 'N/A')
     price = data.get('price', 'N/A')
@@ -34,6 +36,6 @@ def tradingview_webhook():
 
     return 'ok', 200
 
-# Render용 포트 바인딩
+# Render 서버 실행용 포트 설정
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10000)
